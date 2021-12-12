@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 function Home() {
+  const navigate = useNavigate();
   const twoStep = () => {
-    console.log('step');
+    if ('yakov' === 'yakov') navigate('/VerificationPage');
   };
   return (
     <div>

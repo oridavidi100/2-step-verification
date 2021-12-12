@@ -1,10 +1,13 @@
 import { React, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../style/Login.css';
 function Login() {
+  const navigate = useNavigate();
   const username = useRef('nitialValue');
   const Password = useRef('initialValue');
   const submit = () => {
     console.log(username.current.value, Password.current.value);
+    if (username.current.value === Password.current.value) navigate('/Home');
   };
   return (
     <div>
